@@ -1,0 +1,73 @@
+name: '🗂️ : OTHER ISSUE'
+description: For anything that doesn’t fit into the other issue types.
+title: "[Other]: <Short description here>"
+labels: ["help wanted"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🧭 Before You Begin
+        Please check whether your issue could be better filed under:
+        - 🐞 Bug Report  
+        - 🌟 Feature Request  
+        - 📖 Documentation  
+        - 🚀 Enhancement  
+
+        If not, go ahead and describe it below 👇  
+        ---
+
+  - type: input
+    id: summary
+    attributes:
+      label: '📝 : SUMMARY'
+      description: Give a short summary of your issue.
+      placeholder: "e.g., Need clarification about installation setup"
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: '💬 : DETAILED DESCRIPTION'
+      description: Explain your concern, question, or suggestion in detail.
+      placeholder: |
+        Provide as much context as possible:
+        - What are you trying to do?
+        - What problem or confusion are you facing?
+        - Why is this important?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: '🧩 : ISSUE TYPE'
+      description: Choose what best describes your issue.
+      options:
+        - ❓ Question or clarification
+        - 💡 Idea or suggestion
+        - 🧰 Project setup issue
+        - 🧱 Build or environment issue
+        - 🧾 Discussion / feedback
+        - 🗃️ Other (not listed above)
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_info
+    attributes:
+      label: '📎 : ADDITIONAL INFO / REFERENCES'
+      description: Add any extra details, screenshots, or links that can help.
+      placeholder: "Screenshots, links to related issues, or external references."
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        🙌 **Thank you for taking the time to contribute!**
+        - Please keep your description clear and respectful.
+        - We'll review and categorize your issue soon.
+        - Have a great day! ☀️

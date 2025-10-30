@@ -1,0 +1,87 @@
+name: '🌟 : FEATURE REQUEST'
+description: Suggest a new feature, improvement, or enhancement for this project.
+title: "[Feature]: <Short description here>"
+labels: ["enhancement"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 💡 Before You Begin
+        Please check that:
+        - You've **searched existing issues** to avoid duplicates.
+        - The feature you're suggesting fits the **project's scope**.
+        - You can clearly describe the **problem** and **proposed solution**.
+
+        ---
+
+  - type: input
+    id: feature_title
+    attributes:
+      label: '📝 : FEATURE SUMMARY'
+      description: Give a short and clear summary of your requested feature.
+      placeholder: "e.g., Add dark mode support for the dashboard"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem_statement
+    attributes:
+      label: '❔ : PROBLEM OR MOTIVATION'
+      description: What problem does this feature solve, or what's missing without it?
+      placeholder: "Users struggle to read content in low-light environments, so a dark mode would improve accessibility."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: '🚀 : PROPOSED SOLUTION OR FEATURE DESCRIPTION'
+      description: Clearly describe how you think this feature should work.
+      placeholder: |
+        - Add a theme toggle button in the navbar.
+        - Save the selected theme in user preferences.
+        - Apply theme colors across all components.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: '🔄 : ALTERNATIVES OR WORKAROUNDS'
+      description: Have you considered any alternative approaches or temporary fixes?
+      placeholder: "Currently using browser extensions to force dark mode."
+    validations:
+      required: false
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: '🎯 : IMPACT LEVEL'
+      description: How important is this feature to users or the project?
+      options:
+        - 🟢 Nice to have
+        - 🟡 Important but not urgent
+        - 🔴 Must have / high impact
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: '💬 : ADDITIONAL CONTEXT'
+      description: Add any extra details, sketches, references, or links.
+      placeholder: "Include design mockups, screenshots, or related issues if applicable."
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        🧭 **Tips for a Great Feature Request**
+        - Explain *why* this feature matters, not just *what* it does.
+        - Include visual examples or use cases.
+        - Be respectful — good ideas grow from collaboration 🌱
+
+        Thank you for helping make this project better! 🙌

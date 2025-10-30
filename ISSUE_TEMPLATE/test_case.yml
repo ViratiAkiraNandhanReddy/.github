@@ -1,0 +1,124 @@
+name: '🧪 : TEST CASE REPORT / REQUEST'
+description: Report a failing test case or suggest adding a new test.
+title: "[Test]: <Short description here>"
+labels: ["enhancement"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🧪 Test Case Report / Request
+        Help us keep our tests solid and reliable!  
+        Please provide detailed information about the test case, its purpose, and results.  
+        ---
+
+  - type: dropdown
+    id: test_type
+    attributes:
+      label: '🔍 : TYPE OF TEST'
+      description: What type of test are you reporting or requesting?
+      options:
+        - 🧠 Unit Test
+        - 🔗 Integration Test
+        - 🌐 End-to-End (E2E) Test
+        - ⚙️ Performance Test
+        - 🧩 Other
+    validations:
+      required: true
+
+  - type: input
+    id: test_name
+    attributes:
+      label: '🧾 : TEST NAME'
+      description: Name of the test function or area to be tested.
+      placeholder: "e.g., test_user_login_valid_credentials"
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: '📝 : SUMMARY'
+      description: Briefly describe what this test does or should do.
+      placeholder: |
+        Example:
+        - Verify login succeeds with valid credentials.
+        - Ensure API returns 404 for invalid resource ID.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: '🔁 : STEPS TO REPRODUCE OR IMPLEMENT'
+      description: List clear steps to reproduce the failure or describe how the new test should work.
+      placeholder: |
+        1. Run `pytest tests/auth/test_login.py`
+        2. Observe failure in `test_user_login_valid_credentials`
+        3. Expected: status code 200
+        4. Actual: status code 500
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: '✅ : EXPECTED BEHAVIOR'
+      description: Describe what should happen if the test passes successfully.
+      placeholder: "The API should return a valid JSON response with user info."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual_behavior
+    attributes:
+      label: '❌ : ACTUAL BEHAVIOR (IF APPLICABLE)'
+      description: Describe what actually happened if the test failed.
+      placeholder: "The API returned 500 Internal Server Error."
+    validations:
+      required: false
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: '🧩 : ENVIRONMENT DETAILS'
+      description: Specify your environment for reproducibility.
+      placeholder: |
+        - OS: Ubuntu 22.04  
+        - Python: 3.12  
+        - Testing Framework: pytest 8.0  
+        - Commit Hash: a1b2c3d
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: '📜 : LOGS / OUTPUT (OPTIONAL)'
+      description: Paste error tracebacks, console output, or screenshots.
+      placeholder: |
+        ```
+        AssertionError: expected 200 but got 500
+        ```
+    validations:
+      required: false
+
+  - type: textarea
+    id: suggestions
+    attributes:
+      label: '💡 : SUGGESTIONS OR NOTES (OPTIONAL)'
+      description: Share ideas for improving test coverage or structure.
+      placeholder: "We could mock external API calls to avoid timeout failures."
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        🧠 **Tip:**  
+        - Include failing test output or traceback when reporting issues.  
+        - Link related issues or pull requests if applicable.  
+        - Good tests make great projects!  
+
+        🙏 Thanks for helping us ensure code reliability!

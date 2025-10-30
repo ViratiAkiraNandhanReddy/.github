@@ -1,0 +1,91 @@
+name: '🧹 : REFRACTOR REQUEST'
+description: Suggest refactoring or improving existing code structure without changing functionality.
+title: "[Refactor]: <Short description here>"
+labels: ["enhancement"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🧹 Refactor Request
+        Help us make the code cleaner, more efficient, and easier to maintain!  
+        Please provide as much detail as possible to explain what and why you’d like refactored.  
+        ---
+
+  - type: input
+    id: summary
+    attributes:
+      label: '📝 : SUMMARY'
+      description: Briefly describe what needs to be refactored.
+      placeholder: "e.g., Simplify authentication logic in `auth_manager.py`"
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: '💬 : CURRENT SITUATION / CONTEXT'
+      description: Explain the current code state and why it needs refactoring.
+      placeholder: |
+        Example:
+        - The function `processData()` is too large and hard to maintain.
+        - Nested loops make it inefficient.
+        - The file violates the DRY principle.
+    validations:
+      required: true
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: '🎯 : REFACTOR GOAL'
+      description: Explain what improvement or result you expect after refactoring.
+      placeholder: |
+        Example:
+        - Break down large functions into smaller reusable ones.
+        - Improve readability and remove duplicate code.
+        - Optimize structure without changing behavior.
+    validations:
+      required: true
+
+  - type: textarea
+    id: affected_area
+    attributes:
+      label: '🧩 : AFFECTED AREAS'
+      description: Mention which modules, functions, or files would be impacted.
+      placeholder: |
+        - `src/utils/data_parser.py`
+        - `components/AuthForm.jsx`
+    validations:
+      required: true
+
+  - type: textarea
+    id: potential_risks
+    attributes:
+      label: '⚠️ : POTENTIAL RISKS'
+      description: List possible side effects or parts that must be carefully tested.
+      placeholder: |
+        - Risk of breaking login flow.
+        - Might affect data serialization.
+        - Need to re-run unit tests after refactor.
+    validations:
+      required: false
+
+  - type: textarea
+    id: suggestions
+    attributes:
+      label: '💡 : SUGGESTED APPROACH (OPTIONAL)'
+      description: If you have an idea or strategy for refactoring, describe it here.
+      placeholder: "Maybe apply design pattern X, or modularize the logic."
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        🧠 **Tip:**  
+        - Avoid changing functionality — refactors should focus on improving structure.  
+        - Reference any related issues or PRs if relevant.  
+        - Tag reviewers familiar with the affected module.
+
+        🙏 Thanks for helping maintain high code quality!

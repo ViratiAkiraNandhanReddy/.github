@@ -1,0 +1,88 @@
+name: '📖 : DOCUMENTATION ISSUE'
+description: Report incorrect, unclear, or missing documentation.
+title: "[Docs]: <Short description here>"
+labels: ["documentation"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🧭 Before Submitting
+        Please make sure:
+        - You have checked **existing documentation issues**.
+        - This is not a **code bug** or **feature request**.
+        - You can clearly describe which part of the documentation needs attention.
+
+        ---
+
+  - type: input
+    id: doc_section
+    attributes:
+      label: '📘 : AFFECTED SECTION OR FILE'
+      description: Mention the specific section, page, or file that needs changes.
+      placeholder: "e.g., README.md → Installation section"
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue_description
+    attributes:
+      label: '❌ : PROBLEM DESCRIPTION'
+      description: What is wrong, unclear, or missing in the documentation?
+      placeholder: "The installation guide doesn't mention required dependencies for Windows."
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested_update
+    attributes:
+      label: '✅ : SUGGESTED CORRECTION OR ADDITION'
+      description: Suggest the fix, rewrite, or additional content you think should be added.
+      placeholder: |
+        - Add step for installing dependencies using pip.
+        - Clarify how to run setup on macOS.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: doc_type
+    attributes:
+      label: '🧩 : TYPE OF DOCUMENTATION ISSUE'
+      description: What type of improvement does this involve?
+      options:
+        - 📝 Typo or formatting
+        - 📂 Missing content
+        - 🧠 Clarification needed
+        - ⚙️ Outdated information
+        - 🔗 Broken link or reference
+        - 🚀 Enhancement suggestion
+        - 📚 Additional examples or tutorials
+        - 🔍 Inaccurate information
+        - 🎨 Visual improvement (images, diagrams)
+        - 📊 Data or statistics update
+        - 🛠️ Code snippet correction
+        - 🔒 Security-related documentation
+        - ♿ Accessibility improvement
+        - 🧩 Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: '💬 : ADDITIONAL CONTEXT OR SCREENSHOTS'
+      description: Add any examples, references, or screenshots that explain the issue.
+      placeholder: "Screenshot of incorrect section, related link, or external resource."
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        🪶 **Tips for Better Documentation Reports**
+        - Be specific — mention exact headings or lines.
+        - Provide context or examples if possible.
+        - Feel free to submit a PR directly for minor fixes ❤️
+
+        Thank you for helping improve the documentation! 📚✨

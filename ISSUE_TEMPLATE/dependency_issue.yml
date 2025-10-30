@@ -1,0 +1,115 @@
+name: '⚙️ : DEPENDENCY ISSUE'
+description: Report problems related to project dependencies, versions, or compatibility.
+title: "[Dependency]: <Short description here>"
+labels: ["bug"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🧭 Before Reporting
+        Please ensure:
+        - You've confirmed this is a **dependency-related** issue, not a project bug.
+        - You've checked for **similar issues** already open.
+        - You've tested with the **latest version** of the project.
+
+        ---
+
+  - type: input
+    id: dependency_name
+    attributes:
+      label: '📦 : AFFECTED DEPENDENCY / PACKAGE'
+      description: Name of the package, library, or module causing the issue.
+      placeholder: "e.g., requests, express, numpy, or sqlite3"
+    validations:
+      required: true
+
+  - type: input
+    id: version_info
+    attributes:
+      label: '🔢 : VERSION DETAILS'
+      description: Mention the version of the dependency and your project environment.
+      placeholder: "e.g., requests 2.31.0, Python 3.11.3, Ubuntu 22.04"
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue_description
+    attributes:
+      label: '❌ : ISSUE DESCRIPTION'
+      description: What problem are you facing with this dependency?
+      placeholder: |
+        e.g.,
+        - Installation fails with error code.
+        - Version conflict between libraries.
+        - Deprecated functions causing build errors.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction_steps
+    attributes:
+      label: '⚙️ : STEPS TO REPRODUCE'
+      description: How can we reproduce the issue?
+      placeholder: |
+        1. Run `pip install -r requirements.txt`
+        2. Observe the error output.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: dependency_type
+    attributes:
+      label: '🧩 : TYPE OF DEPENDENCY'
+      description: Specify what kind of dependency this is.
+      options:
+        - 🧱 Core project dependency
+        - 🔧 Development dependency
+        - 🧪 Testing or optional dependency
+        - 🌐 External API or service
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: '📜 : LOGS / ERROR MESSAGES'
+      description: Paste any terminal, console, or build log outputs that help identify the issue.
+      render: shell
+      placeholder: |
+        ```
+        ERROR: Could not resolve dependency: requests==3.0.0 (not found)
+        ```
+    validations:
+      required: false
+
+  - type: textarea
+    id: possible_solution
+    attributes:
+      label: '💡 : POSSIBLE FIX OR SUGGESTION'
+      description: Suggest a workaround, compatible version, or alternative package if you know one.
+      placeholder: |
+        - Downgrade requests to 2.31.0
+        - Update project dependency list in requirements.txt
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: '💬 : ADDITIONAL CONTEXT'
+      description: Any other details that might help us resolve the issue.
+      placeholder: "Links to dependency changelogs, system info, or related issues."
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        🧠 **Tips:**
+        - Include full version details and platform info.
+        - Link to dependency documentation or release notes if relevant.
+        - Clear and complete reports help resolve issues faster ⚡
+
+        Thank you for keeping our dependencies healthy! 🛠️

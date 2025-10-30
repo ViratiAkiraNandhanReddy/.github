@@ -1,0 +1,116 @@
+name: '🐞 : BUG REPORT'
+description: Report a reproducible bug or issue in the project.
+title: "[Bug]: <Short description here>"
+labels: ["bug"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🧭 Before You Start
+        Please make sure:
+        - You are using the **latest version** of the project.
+        - You've checked for **duplicate issues**.
+        - You've provided **clear steps** so we can reproduce the bug.
+
+        ---
+  - type: input
+    id: summary
+    attributes:
+      label: '📝 : BUG SUMMARY'
+      description: Provide a short, clear summary of the issue.
+      placeholder: "e.g., App crashes when submitting form"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: '⚙️ : STEPS TO REPRODUCE'
+      description: List the exact steps that lead to the problem.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Observe error message or incorrect behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: '✅ : EXPECTED BEHAVIOR'
+      description: Describe what should have happened.
+      placeholder: "The form should submit successfully and redirect to the dashboard."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: '❌ : ACTUAL BEHAVIOR'
+      description: Describe what actually happened instead.
+      placeholder: "The page freezes and shows an error: 'Cannot read property of undefined'."
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: '📜 : RELEVANT LOGS / CONSOLE OUTPUT'
+      description: If possible, paste any error logs or screenshots.
+      render: shell
+      placeholder: |
+        ```
+        Error: Something went wrong
+            at main.js:45
+        ```
+    validations:
+      required: false
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: '🧱 : SEVERITY LEVEL'
+      description: How serious is this issue?
+      options:
+        - 🟢 Minor (cosmetic or small inconvenience)
+        - 🟡 Moderate (affects a feature but not blocking)
+        - 🔴 Critical (crash or data loss)
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: '🌐 : ENVIRONMENT DETAILS'
+      description: Mention environment details (OS, browser, device, version, etc.).
+      placeholder: "e.g., Windows 11, Chrome 120.0, Node.js v18.17.1"
+    validations:
+      required: true
+
+  - type: textarea
+    id: possible_cause
+    attributes:
+      label: '🔍 : POSSIBLE CAUSE OR CONTEXT'
+      description: If you have an idea about why it's happening, explain here.
+      placeholder: "Maybe related to the form validation function in main.js."
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional_info
+    attributes:
+      label: '💬 : ADDITIONAL INFORMATION'
+      description: Any other info, suggestions, or references.
+      placeholder: "Screenshots (Drag & Drop), related issues, or temporary workarounds."
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        💡 **Tips:**
+        - Attach screenshots or recordings when possible.
+        - Be clear and descriptive — this helps resolve issues faster.
+        - Thank you for contributing to improving this project! 🚀

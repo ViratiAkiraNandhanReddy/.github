@@ -1,0 +1,102 @@
+name: '🚀 : ENHANCEMENT REQUEST'
+description: Suggest an improvement or optimization to an existing feature or code.
+title: "[Enhancement]: <Short description here>"
+labels: ["enhancement"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🧭 Before You Begin
+        Please make sure:
+        - This is about improving an **existing** feature (not adding a new one).
+        - You've checked for **similar enhancement requests**.
+        - You can clearly describe **what** should be improved and **why**.
+
+        ---
+
+  - type: input
+    id: feature_name
+    attributes:
+      label: '🧱 : AFFECTED FEATURE / AREA'
+      description: Which part of the project should be enhanced?
+      placeholder: "e.g., Login system, API performance, UI layout"
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_behavior
+    attributes:
+      label: '⚙️ : CURRENT BEHAVIOR'
+      description: What is the current behavior or limitation?
+      placeholder: |
+        - The dashboard loads slowly when fetching data.
+        - The login form has too many steps.
+    validations:
+      required: true
+
+  - type: textarea
+    id: improvement_description
+    attributes:
+      label: '🚀 : SUGGESTED ENHANCEMENT'
+      description: Describe how the feature could be improved or optimized.
+      placeholder: |
+        - Use lazy loading for data tables.
+        - Simplify login flow with one-step authentication.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: improvement_type
+    attributes:
+      label: '🧩 : TYPE OF ENHANCEMENT'
+      description: Choose the category of your enhancement.
+      options:
+        - ⚙️ Performance optimization
+        - 🧠 Code quality / refactor
+        - 🎨 UI/UX improvement
+        - 🔒 Security improvement
+        - 🧰 Developer experience
+    validations:
+      required: true
+
+  - type: textarea
+    id: benefits
+    attributes:
+      label: '🌟 : EXPECTED BENEFITS'
+      description: What benefits will this enhancement bring to users or developers?
+      placeholder: |
+        - Faster load times.
+        - Cleaner, more maintainable code.
+        - Better user engagement.
+    validations:
+      required: true
+
+  - type: textarea
+    id: possible_risks
+    attributes:
+      label: '⚠️ : POSSIBLE RISKS OR SIDE EFFECTS'
+      description: Could this change introduce any new issues or trade-offs?
+      placeholder: "Might increase build size or require re-testing existing modules."
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: '💬 : ADDITIONAL CONTEXT OR REFERENCES'
+      description: Add any context, mockups, links, or references.
+      placeholder: "Link related issues, performance reports, or screenshots."
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        🧠 **Tips:**
+        - Be specific and focused on one area per enhancement.
+        - Include reasoning and measurable impact when possible.
+        - Constructive and detailed reports help improvements happen faster 🚀
+
+        Thank you for helping make this project better! 🙌
