@@ -42,9 +42,7 @@ This Code of Conduct applies within:
 ---
 
 ## 🧾 ENFORCEMENT
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at:
-
-📧 **[viratiaki53@gmail.com]**
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at: [viratiaki53@gmail.com](mailto:viratiaki53@gmail.com)
 
 All complaints will be reviewed and investigated promptly and fairly.  
 The project team is obligated to maintain confidentiality with regard to the reporter of an incident.
